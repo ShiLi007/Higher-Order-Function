@@ -95,5 +95,5 @@ console.log(reduce([1, 2, 3, 4], function(a, b) {
 console.log(ancestry.reduce(function(min, cur) {
   if (cur.born < min.born) return cur;
   else return min;
-}));
+}));     //If your array contains at least one element, you are allowed to leave off the start argument. The method will take the first element of the array as its start value and start reducing at the second element.
 // → {name: "Pauwels van Haverbeke", born: 1535, …}
