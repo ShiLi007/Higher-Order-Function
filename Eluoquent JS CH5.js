@@ -1,5 +1,5 @@
 //A close look to forEach, filter,map and reduce functions.
-
+reference:   function noisy(f)      http://stackoverflow.com/questions/23535316/higher-order-functions-in-javascript
 
 //forEach: the original function 
 
