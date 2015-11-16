@@ -97,3 +97,37 @@ console.log(ancestry.reduce(function(min, cur) {
   else return min;
 }));     //If your array contains at least one element, you are allowed to leave off the start argument. The method will take the first element of the array as its start value and start reducing at the second element.
 // → {name: "Pauwels van Haverbeke", born: 1535, …}
+
+
+
+--------------------------------------------------------------
+function each(collection,iterator){
+  if(Array.isArray(collection))
+  for (var i=0;i<collection;i++){
+    iterator(collection[i],i,collection)
+  else 
+  for(var key in collection)
+  iterator(collection[key],key,collection)
+  }
+}
+
+function filter(collection,test){
+  var result=[]
+each(collection,function(value){
+  if(test(value)){
+    result.push(value)
+  }
+})
+  return result
+}
+
+function map(collection,iterator){
+  var result=[]
+  each(collection,function(value,key,collection){
+    var value=iterator(value,key,collection)
+    value.push(value)
+    
+  })
+  return result
+}
+
