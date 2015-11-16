@@ -131,3 +131,14 @@ function map(collection,iterator){
   return result
 }
 
+function reduce(collection,iterator,accumulator){
+  each(collection,function(value){
+    accumulator = iterator(accumulator,value)
+    
+  })
+  
+  return accumulator
+  
+  
+  
+}
